@@ -1,9 +1,10 @@
-package com.codeslayers.smartiv
+package com.codeslayers.smartiv.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.codeslayers.smartiv.R
 
 class SplashActivity : AppCompatActivity() {
 

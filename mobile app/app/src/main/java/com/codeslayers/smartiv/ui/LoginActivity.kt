@@ -1,9 +1,11 @@
-package com.codeslayers.smartiv
+package com.codeslayers.smartiv.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.codeslayers.smartiv.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -44,7 +46,9 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener {
 
             }.addOnSuccessListener {
-                Toast.makeText(this, "Successfully Login", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Successfully Login", Toast.LENGTH_SHORT).show()
+                val signInIntent = Intent(this, HomeActivity::class.java)
+                startActivity(signInIntent)
             }.addOnFailureListener {
                 Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
             }
@@ -56,6 +60,8 @@ class LoginActivity : AppCompatActivity() {
 
             }.addOnSuccessListener {
                 Toast.makeText(this, "Successfully Login", Toast.LENGTH_LONG).show()
+                val signUpIntent = Intent(this, HomeActivity::class.java)
+                startActivity(signUpIntent)
             }.addOnFailureListener {
                 Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
 

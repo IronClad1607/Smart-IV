@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.codeslayers.smartiv.R
-import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -44,27 +44,50 @@ class LoginActivity : AppCompatActivity() {
     private fun signIn(userID: String, pass: String) {
         auth.signInWithEmailAndPassword(userID, pass)
             .addOnCompleteListener {
-
+                if(!it.isSuccessful){
+                    try {
+                        throw it.exception!!
+                    }catch (e:FirebaseAuthInvalidCredentialsException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }catch (e:FirebaseAuthInvalidUserException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    } catch (e:FirebaseAuthUserCollisionException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    } catch (e: FirebaseAuthWeakPasswordException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }
+                }
             }.addOnSuccessListener {
                 Toast.makeText(this, "Successfully Login", Toast.LENGTH_SHORT).show()
                 val signInIntent = Intent(this, HomeActivity::class.java)
                 startActivity(signInIntent)
             }.addOnFailureListener {
-                Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun signUp(userID: String, pass: String) {
         auth.createUserWithEmailAndPassword(userID, pass)
             .addOnCompleteListener {
-
+                if(!it.isSuccessful){
+                    try {
+                        throw it.exception!!
+                    }catch (e:FirebaseAuthInvalidCredentialsException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }catch (e:FirebaseAuthInvalidUserException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    } catch (e:FirebaseAuthUserCollisionException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    } catch (e: FirebaseAuthWeakPasswordException){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }
+                }
             }.addOnSuccessListener {
                 Toast.makeText(this, "Successfully Login", Toast.LENGTH_LONG).show()
                 val signUpIntent = Intent(this, HomeActivity::class.java)
                 startActivity(signUpIntent)
             }.addOnFailureListener {
-                Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
-
+                Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show()
             }
     }
 

@@ -28,7 +28,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/patient_name"
                 android:inputType="text"
                 android:paddingStart="8dp"
@@ -54,7 +54,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/gender"
                 android:inputType="text"
                 android:paddingStart="8dp"
@@ -85,7 +85,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/room_number"
                 android:inputType="number"
                 android:paddingStart="8dp"
@@ -111,7 +111,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/bed_number"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -138,7 +138,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:hint="@string/consulting_doctor"
             android:inputType="text"
             android:textColor="@android:color/white"
@@ -168,7 +168,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/age"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -194,7 +194,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/caros_thin"
+                android:fontFamily="@font/roboto"
                 android:hint="@string/patients_blood_group"
                 android:inputType="text"
                 android:paddingStart="8dp"
@@ -223,7 +223,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:hint="@string/suffering_from"
             android:inputType="text"
             android:textColor="@android:color/white"
@@ -243,7 +243,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:text="@string/drip_used"
             android:textSize="20sp" />
 
@@ -269,7 +269,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:hint="@string/if_other"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
@@ -290,18 +290,18 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:boxStrokeColor="@color/colorAccent"
-        app:hintTextColor="@color/colorAccent">
+        app:hintTextColor="@android:color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:fontFamily="@font/roboto"
             android:hint="@string/emergency_contact_name_and_number"
             android:inputType="text"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -313,7 +313,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:background="@color/backBlue"
-        android:textSize="20dp"
+        android:id="@+id/btnSubmit"
+        android:textSize="20sp"
         android:backgroundTint="@color/backBlue"
         android:text="@string/submit"
         android:textColor="@color/textGrey"

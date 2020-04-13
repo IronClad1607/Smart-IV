@@ -36,7 +36,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:hint="@string/login_id"
             android:inputType="textEmailAddress"
             android:paddingStart="8dp"
@@ -60,7 +60,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/caros_thin"
+            android:fontFamily="@font/roboto"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingStart="8dp"
@@ -79,7 +79,7 @@
         android:background="@color/backBlue"
         android:backgroundTint="@color/backBlue"
         android:text="@string/login"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textColor="@color/textGrey"
         android:textSize="25sp"
         android:theme="@style/FontChange" />

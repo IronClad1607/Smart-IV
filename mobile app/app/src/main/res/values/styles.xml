@@ -19,7 +19,7 @@
 
 
     <style name="FontChange">
-        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
     <style name="Toolbar">

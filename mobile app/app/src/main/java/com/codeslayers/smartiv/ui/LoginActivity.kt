@@ -10,7 +10,6 @@ import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-
     private val auth by lazy {
         FirebaseAuth.getInstance()
     }
@@ -23,20 +22,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+
+        if (currentUser != null) {
+            val directIntent = Intent(this, HomeActivity::class.java)
+            startActivity(directIntent)
+        }
+
         btnLogin.setOnClickListener {
             val userID = etLoginId.editText?.text.toString()
             val pass = etPass.editText?.text.toString()
 
-            val check = checkEmail(userID)!!
-            Log.d("PUI", "email checked, $check")
-
-            if (!check) {
-                Log.d("PUI", "signup")
-                signUp(userID, pass)
-            } else {
-                Log.d("PUI", "signin")
-                signIn(userID, pass)
-            }
+            checkEmail(userID, pass)
         }
 
     }
@@ -44,16 +40,16 @@ class LoginActivity : AppCompatActivity() {
     private fun signIn(userID: String, pass: String) {
         auth.signInWithEmailAndPassword(userID, pass)
             .addOnCompleteListener {
-                if(!it.isSuccessful){
+                if (!it.isSuccessful) {
                     try {
                         throw it.exception!!
-                    }catch (e:FirebaseAuthInvalidCredentialsException){
+                    } catch (e: FirebaseAuthInvalidCredentialsException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    }catch (e:FirebaseAuthInvalidUserException){
+                    } catch (e: FirebaseAuthInvalidUserException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    } catch (e:FirebaseAuthUserCollisionException){
+                    } catch (e: FirebaseAuthUserCollisionException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    } catch (e: FirebaseAuthWeakPasswordException){
+                    } catch (e: FirebaseAuthWeakPasswordException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
                 }
@@ -69,16 +65,16 @@ class LoginActivity : AppCompatActivity() {
     private fun signUp(userID: String, pass: String) {
         auth.createUserWithEmailAndPassword(userID, pass)
             .addOnCompleteListener {
-                if(!it.isSuccessful){
+                if (!it.isSuccessful) {
                     try {
                         throw it.exception!!
-                    }catch (e:FirebaseAuthInvalidCredentialsException){
+                    } catch (e: FirebaseAuthInvalidCredentialsException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    }catch (e:FirebaseAuthInvalidUserException){
+                    } catch (e: FirebaseAuthInvalidUserException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    } catch (e:FirebaseAuthUserCollisionException){
+                    } catch (e: FirebaseAuthUserCollisionException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-                    } catch (e: FirebaseAuthWeakPasswordException){
+                    } catch (e: FirebaseAuthWeakPasswordException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
                 }
@@ -92,14 +88,17 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    private fun checkEmail(email: String): Boolean? {
-        var isExist: Boolean? = false
+    private fun checkEmail(email: String, pass: String) {
         auth.fetchSignInMethodsForEmail(email)
             .addOnCompleteListener {
-                isExist = it.result?.signInMethods?.isEmpty()
-            }.addOnFailureListener {
-                Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                if (it.result?.signInMethods?.isEmpty()!!) {
+
+                    Log.d("PUI", "signup")
+                    signUp(email, pass)
+                } else {
+                    Log.d("PUI", "signin")
+                    signIn(email, pass)
+                }
             }
-        return isExist
     }
 }

@@ -35,13 +35,17 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.btnSignout -> {
             auth.signOut()
-            Toast.makeText(this,"Sign Out Successful",Toast.LENGTH_SHORT).show()
-            val signOutIntent = Intent(this,LoginActivity::class.java)
+            Toast.makeText(this, "Sign Out Successful", Toast.LENGTH_SHORT).show()
+            val signOutIntent = Intent(this, LoginActivity::class.java)
             startActivity(signOutIntent)
             true
         }
 
 
         else -> super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        finishAffinity()
     }
 }

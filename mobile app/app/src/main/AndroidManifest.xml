@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.AssistanceActivity"></activity>
+        <activity android:name=".ui.CreateEntryActivity" />
+        <activity android:name=".ui.HomeActivity" />
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>

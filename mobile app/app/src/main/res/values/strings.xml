@@ -6,4 +6,16 @@
     <string name="add_new_entry">Add New Entry</string>
     <string name="check_for_assistance">Check For Assistance</string>
     <string name="sign_out">Sign Out</string>
+    <string name="patient_name">Patient Name:</string>
+    <string name="room_number">Room Number:</string>
+    <string name="bed_number">Bed Number:</string>
+    <string name="consulting_doctor">Consulting Doctor:</string>
+    <string name="age">Patient\'s Age:</string>
+    <string name="patients_blood_group">Patients Blood Group:</string>
+    <string name="suffering_from">Suffering From:</string>
+    <string name="drip_used">Drip Used:</string>
+    <string name="if_other">If Other:</string>
+    <string name="gender">Gender:</string>
+    <string name="emergency_contact_name_and_number">Emergency Contact Name and Number:</string>
+    <string name="submit">Submit</string>
 </resources>

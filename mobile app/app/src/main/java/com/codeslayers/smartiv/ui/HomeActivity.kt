@@ -24,6 +24,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
+
+        cvNewEntry.setOnClickListener {
+            val newEntryIntent = Intent(this,CreateEntryActivity::class.java)
+            startActivity(newEntryIntent)
+        }
+
+        cvCheckPatience.setOnClickListener{
+            val checkIntent = Intent(this,AssistanceActivity::class.java)
+            startActivity(checkIntent)
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

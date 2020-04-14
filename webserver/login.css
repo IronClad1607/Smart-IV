@@ -1,3 +1,53 @@
 body{
 	background-color: #25CABF
+
+}
+.logo{
+   margin-left: 200px;
+}
+h1{
+	font-size: 90px;
+	position: relative;
+	top:-200px;
+	left:400px;
+	width:800px;
+	height:100px;
+	background-color: grey;
+		
+}
+
+h2{
+	position: relative;
+	top:-100px;
+	text-align: center;
+
+}
+.box1{
+	height:50px;
+	width:280px;
+	position: relative;
+	left:630px;
+	top:-100px;
+	background-color: white;
+	border-color: grey;
+	border-width: 2px;
+	border-style: solid;
+}
+.box2{
+	
+	height:50px;
+	width:280px;
+	position: relative;
+	left:630px;
+	top:-100px;
+	background-color: white;
+	border-color: grey;
+	border-width: 2px;
+	border-style: solid;
+}
+h5{
+color: grey;
+position: relative;
+bottom:5px;
+left:110px;
 }

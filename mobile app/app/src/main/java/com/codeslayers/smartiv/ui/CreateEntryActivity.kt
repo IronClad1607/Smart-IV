@@ -8,10 +8,17 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.codeslayers.smartiv.R
+import com.codeslayers.smartiv.model.PatDetails
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_create_entry.*
 import kotlinx.android.synthetic.main.activity_create_entry.view.*
 
 class CreateEntryActivity : AppCompatActivity() {
+
+
+    private val db by lazy {
+        FirebaseDatabase.getInstance()
+    }
 
     var patDripName: String = ""
 
@@ -52,7 +59,7 @@ class CreateEntryActivity : AppCompatActivity() {
                 patDripName = dripName[position]
                 if (patDripName == "None") {
                     etDripSpec.visibility = View.VISIBLE
-                }else{
+                } else {
                     etDripSpec.visibility = View.GONE
                 }
             }
@@ -70,12 +77,25 @@ class CreateEntryActivity : AppCompatActivity() {
             val patBG = etPatBG.editText?.text.toString()
             val patDis = etPatDis.editText?.text.toString()
             val emergencyNumber = etPatEN.editText?.text.toString()
-            if(etDripSpec.visibility == View.VISIBLE){
+            if (etDripSpec.visibility == View.VISIBLE) {
                 patDripName = etDripSpec.editText?.text.toString()
             }
+            val dripStatus: Boolean = false
 
+            val child = PatDetails(
+                patName,
+                patGen,
+                consultingDoctor,
+                patAge,
+                patBG,
+                patDis,
+                emergencyNumber,
+                patDripName,
+                dripStatus
+            )
 
-            Log.d("PUI","""
+            Log.d(
+                "PUI", """
                 $patName
                 $patGen
                 $roomNumber
@@ -86,7 +106,20 @@ class CreateEntryActivity : AppCompatActivity() {
                 $patDis
                 $emergencyNumber
                 $patDripName
-            """.trimIndent())
+            """.trimIndent()
+            )
+
+
+            val myRef = db.reference
+
+            val patValue = myRef.child("Room Number $roomNumber").child("Bed Number $bedNumber")
+            patValue.setValue(child)
+                .addOnCompleteListener {
+
+                }
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 }

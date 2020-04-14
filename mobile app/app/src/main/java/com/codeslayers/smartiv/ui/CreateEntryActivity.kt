@@ -1,5 +1,6 @@
 package com.codeslayers.smartiv.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -119,7 +120,15 @@ class CreateEntryActivity : AppCompatActivity() {
                 }
                 .addOnSuccessListener {
                     Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show()
+                    val backIntent = Intent(this, HomeActivity::class.java)
+                    startActivity(backIntent)
                 }
         }
+    }
+
+
+    override fun onBackPressed() {
+        val backIntent = Intent(this, HomeActivity::class.java)
+        startActivity(backIntent)
     }
 }

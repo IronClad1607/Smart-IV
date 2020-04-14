@@ -13,8 +13,21 @@ int ldr=A0;
 #define WIFI_SSID "Galaxy"
 #define WIFI_PASSWORD "ssingh9970"
 
+float sensorValue=0;
+
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  Serial.print("connecting");
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.println();
+  Serial.print("connected: ");
+  Serial.println(WiFi.localIP());
+
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
 
 }
 

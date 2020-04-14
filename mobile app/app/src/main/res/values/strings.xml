@@ -18,4 +18,5 @@
     <string name="gender">Gender:</string>
     <string name="emergency_contact_name_and_number">Emergency Contact Name and Number:</string>
     <string name="submit">Submit</string>
+    <string name="iv_fluid">IV Fluid:</string>
 </resources>

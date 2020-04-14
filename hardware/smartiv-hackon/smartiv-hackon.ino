@@ -14,6 +14,7 @@ int ldr=A0;
 #define WIFI_PASSWORD "ssingh9970"
 
 float sensorValue=0;
+boolean isEmpty;
 
 void setup() {
   Serial.begin(9600);
@@ -32,6 +33,17 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  sensorValue=analogRead(ldr);
+  delay(100);
+  Firebase.setFloat("/Room234/Bed10/",sensorValue);
+   if(value<580) {
+    Firebase.set(isEmpty,false);
+  }
+  else {
+    Firebase.set(isEmpty,true);
+    tone(D1,200,300);
+  }
+  delay(100);
+}
 
 }

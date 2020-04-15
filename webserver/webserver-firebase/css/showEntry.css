@@ -1,7 +1,7 @@
 
 body {
-background-color: #bd4f6c;
-background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+  background-color: #fec84e;
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
 min-height: 100vh;
 }
 #show {
@@ -34,4 +34,27 @@ padding: 15px;
 
 .dripClass {
 min-height: 80px;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+#logoContainer h1 {
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+}
+#logoContainer {
+ margin: 2vh auto;
+}
+
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item a {
+  font-weight: 500;
 }

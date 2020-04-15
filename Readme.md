@@ -30,7 +30,7 @@ An IoT based automatic alerting device that consists of laser and a precise Ligh
 
 •	The nurse and doctors will be notified about the fluid level using mobile application.
 
-<img src = "smartiv-git.PNG" height = "200" width="800" align="center" hspace="10" vspace="10"> 
+<img src = "/images/smartiv-git.PNG" height = "200" width="800" align="center" hspace="10" vspace="10"> 
 
 The cost of the product is estimated to be not more than Rs. 400which makes it highly economical to be employed in the hospitals.
 

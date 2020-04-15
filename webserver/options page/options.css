@@ -1,3 +1,53 @@
 body{
 	background-color: #25CABF;
+	
+
+
+}
+img{
+	
+    position: relative;
+	top:100px;
+	left:670px;
+}
+
+a{
+	color: white;
+}
+a:hover{
+	color:black;
+
+}
+.one{
+	border-top: 20px;
+	position: relative;
+	top:150px;
+	left:370px;
+	margin-bottom: 20px;
+	text-align: center;
+	height: 50px;
+	width:350px;
+	background-color: grey;
+
+}
+.two{
+	border-top: 20px;
+	position: relative;
+	top:150px;
+	left:370px;
+	text-align: center;
+	height: 50px;
+	width:350px;
+	background-color: grey;
+	margin-bottom: 20px;
+}
+.three{
+	border-top: 20px;
+	position: relative;
+	top:150px;
+	left:370px;
+	text-align: center;
+	height: 50px;
+	width:350px;
+	background-color: grey;
 }

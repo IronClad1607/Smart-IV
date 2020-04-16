@@ -109,9 +109,9 @@ With the new entry of a patient is created using web application, a record is ge
  </tr>
  <tr>
  	<td>
-   	<img src="/images/webserver/2.png" height="180" width="350">
+   	<img src="/images/webserver/2.PNG" height="180" width="350">
 		</td>
-		<td><img src="/images/webserver/3.png" height="180" width="350">
+		<td><img src="/images/webserver/3.PNG" height="180" width="350">
 		</td>
  </tr>
  <tr>
@@ -123,9 +123,9 @@ With the new entry of a patient is created using web application, a record is ge
 		</td>
 	</tr>
 	<tr>	
-		<td><img src="/images/webserver/4.png" height="180" width="350">
+		<td><img src="/images/webserver/4.PNG" height="180" width="350">
 		</td>
-		<td><img src="/images/webserver/5.png" height="180" width="350">
+		<td><img src="/images/webserver/5.PNG" height="180" width="350">
 		</td>
 	</tr>
 </table>

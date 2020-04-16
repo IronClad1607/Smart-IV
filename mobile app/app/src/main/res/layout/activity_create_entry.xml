@@ -10,7 +10,7 @@
     tools:context=".createentry.CreateEntryActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPatient"
+        android:id="@+id/etPatientID"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="150dp"
         app:boxStrokeColor="@color/colorAccent"
         app:hintTextColor="@color/colorAccent">
 
@@ -35,14 +35,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSubPatID"
-        android:layout_width="wrap_content"
+    <com.unstoppable.submitbuttonview.SubmitButton
+        android:id="@+id/btnPatID"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/backgrey"
-        android:layout_marginTop="60dp"
-        android:text="@string/submit" />
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="100dp"
+        app:buttonColor="@android:color/white"
+        app:buttonText="@string/submit"
+        app:buttonTextSize="20sp"
+        app:progressStyle="loading"
+        app:succeedColor="@color/backBlue" />
 
 
 </FrameLayout>

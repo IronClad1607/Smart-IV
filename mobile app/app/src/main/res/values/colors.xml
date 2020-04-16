@@ -6,5 +6,6 @@
     <color name="backBlue">#25CABF</color>
     <color name="backgrey">#212121</color>
     <color name="textGrey">#5d6470</color>
+    <color name="cardBlue">#648e8b</color>
     <color name="textYellow">#f3cd4c</color>
 </resources>

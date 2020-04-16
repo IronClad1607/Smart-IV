@@ -19,4 +19,5 @@
     <string name="emergency_contact_name_and_number">Emergency Contact Name and Number:</string>
     <string name="submit">Submit</string>
     <string name="iv_fluid">IV Fluid:</string>
+    <string name="patient_id">Patient ID:</string>
 </resources>

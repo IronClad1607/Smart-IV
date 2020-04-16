@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,42 @@
     android:background="@drawable/back"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".ui.CreateEntryActivity">
+    tools:context=".createentry.CreateEntryActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPatient"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/patient_id"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubPatID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/backgrey"
+        android:layout_marginTop="60dp"
+        android:text="@string/submit" />
 
-</RelativeLayout>
+
+</FrameLayout>

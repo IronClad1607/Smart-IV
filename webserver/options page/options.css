@@ -1,14 +1,18 @@
 body{
 	background-color: #25CABF;
 	
-
-
+}
+h3{
+  position: relative;
+  left:180px;
+  top:-70px;
 }
 img{
 	
     position: relative;
-	top:100px;
-	left:670px;
+	top:20px;
+	left:20px;
+	
 }
 
 a{
@@ -19,35 +23,56 @@ a:hover{
 
 }
 .one{
+	padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:150px;
+	top:-30px;
 	left:370px;
 	margin-bottom: 20px;
 	text-align: center;
-	height: 50px;
-	width:350px;
+	height: 100px;
+	width:400px;
 	background-color: grey;
 
 }
 .two{
+		padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:150px;
+	top:-130px;
 	left:370px;
-	text-align: center;
-	height: 50px;
-	width:350px;
-	background-color: grey;
 	margin-bottom: 20px;
+	text-align: center;
+	height: 100px;
+	width:400px;
+	background-color: grey;
 }
 .three{
+	padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:150px;
+	top:-230px;
 	left:370px;
+	margin-bottom: 20px;
 	text-align: center;
-	height: 50px;
-	width:350px;
+	height: 100px;
+	width:400px;
 	background-color: grey;
+}
+.img1{
+	position: relative;
+	left:250px;
+	top:50px;
+
+
+}
+.img2{
+	position: relative;
+	left:250px;
+	top:-50px;
+}
+.img3{
+	position: relative;
+	left:250px;
+	top:-150px;
 }

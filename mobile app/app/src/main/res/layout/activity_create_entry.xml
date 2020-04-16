@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,20 +11,22 @@
 
     <TextView
         android:id="@+id/tvWarning"
-        android:fontFamily="@font/roboto"
-        android:layout_marginStart="10dp"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="220dp"
-        android:text="@string/enter_6721522_or_9420875_to_continue"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center|top"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginBottom="5dp"
-        android:layout_height="wrap_content"/>
+        android:fontFamily="@font/roboto"
+        android:text="@string/enter_6721522_or_9420875_to_continue" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPatientID"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWarning"
         android:layout_gravity="center"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
@@ -50,6 +52,7 @@
         android:id="@+id/btnPatID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="100dp"
         app:buttonColor="@android:color/white"
@@ -59,4 +62,4 @@
         app:succeedColor="@color/backBlue" />
 
 
-</FrameLayout>
+</RelativeLayout>

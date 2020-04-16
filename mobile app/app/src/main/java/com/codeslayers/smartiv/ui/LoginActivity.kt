@@ -32,7 +32,11 @@ class LoginActivity : AppCompatActivity() {
             val userID = etLoginId.editText?.text.toString()
             val pass = etPass.editText?.text.toString()
 
-            checkEmail(userID, pass)
+            if (userID.isEmpty() or pass.isEmpty()) {
+                Toast.makeText(this, "Enter Login ID or Password", Toast.LENGTH_SHORT).show()
+            } else {
+                checkEmail(userID, pass)
+            }
         }
 
     }

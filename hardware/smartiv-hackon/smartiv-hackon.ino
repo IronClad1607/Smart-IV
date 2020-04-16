@@ -29,21 +29,26 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-
+  pinMode(D1,OUTPUT);  
+  pinMode(ldr,INPUT);
 }
 
 void loop() {
   sensorValue=analogRead(ldr);
   delay(100);
   Firebase.setFloat("/Room234/Bed10/",sensorValue);
-   if(value<580) {
-    Firebase.set(isEmpty,false);
+   if(sensorValue<580) 
+  {
+    isEmpty=false;
+    Firebase.setBool("/Room234/Bed10/dripStatus",isEmpty);
   }
-  else {
-    Firebase.set(isEmpty,true);
+  if(sensorValue>580)
+  {
+    isEmpty=true;
+    Firebase.setBool("/Room234/Bed10/dripStatus",isEmpty);
     tone(D1,200,300);
   }
   delay(100);
-}
+
 
 }

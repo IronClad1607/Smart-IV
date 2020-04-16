@@ -26,7 +26,7 @@ a:hover{
 	padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:-30px;
+	top:-50px;
 	left:370px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -36,10 +36,10 @@ a:hover{
 
 }
 .two{
-		padding-top: 30px;
+	padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:-130px;
+	top:-150px;
 	left:370px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -51,7 +51,7 @@ a:hover{
 	padding-top: 30px;
 	border-top: 20px;
 	position: relative;
-	top:-230px;
+	top:-250px;
 	left:370px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -61,18 +61,17 @@ a:hover{
 }
 .img1{
 	position: relative;
-	left:250px;
-	top:50px;
-
+	left:450px;
+	top:30px;
 
 }
 .img2{
 	position: relative;
-	left:250px;
-	top:-50px;
+	left:450px;
+	top:-70px;
 }
 .img3{
 	position: relative;
-	left:250px;
-	top:-150px;
+	left:450px;
+	top:-170px;
 }

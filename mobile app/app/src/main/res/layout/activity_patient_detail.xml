@@ -32,7 +32,7 @@
         android:layout_below="@id/includePatMed" />
 
     <com.unstoppable.submitbuttonview.SubmitButton
-        android:id="@+id/btnPatSubmit"
+        android:id="@+id/btnDripSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

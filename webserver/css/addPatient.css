@@ -1,0 +1,50 @@
+body{
+  background-color: #25CABF;
+  /* background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%); */
+
+  margin-bottom: 100px;
+}
+
+#logo {
+	display: block;
+	margin: 5vh auto 2vh auto;
+}
+
+#logoContainer h1 {
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+ margin-bottom: 5vh;
+}
+
+.navbar-custom{
+  background-color: #25CABF;
+}
+.navbar-brand{
+  color: #000000;
+}
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item a {
+  font-weight: 500;
+}
+
+.signout {
+	position: absolute;
+	right: 2vw;
+}
+
+.form-inline {
+	margin-bottom: 0;
+}
+
+.form-inline button{
+	font-weight: 500;
+}
+
+#status{
+	margin-top: 2vh;
+	font-weight: 500;
+}

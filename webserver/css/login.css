@@ -1,5 +1,11 @@
+html {
+	height: 100%;
+}
 body{
-	background-color: #25CABF;
+	/* background-color: #60dfcd;
+	background-image: linear-gradient(315deg, #60dfcd 0%, #1e9afe 74%); */
+	  background-color: #25CABF;
+	/* min-height: 100vh; */
 }
 
  #logo {
@@ -25,4 +31,8 @@ body{
 .form-control:focus {
 	border-color: #000;
 	box-shadow: none;
+}
+#status{
+	margin-top: 2vh;
+	font-weight: 500;
 }

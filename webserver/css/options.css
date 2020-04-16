@@ -1,0 +1,59 @@
+body{
+	/* background-color: #60dfcd;
+background-image: linear-gradient(315deg, #60dfcd 0%, #1e9afe 74%); */
+  background-color: #25CABF;
+	min-height: 100vh;
+}
+
+#logo {
+	display: block;
+	margin: 5vh auto 2vh auto;
+}
+
+#logoContainer h1 {
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+ margin-bottom: 5vh;
+}
+
+.container >div {
+	text-align: center;
+	margin: 0 auto 2vh auto;
+	background-color: rgba(255,255,255,0.2);
+	max-width: 500px;
+	padding: 20px;
+	cursor: pointer;
+
+}
+.container div img {
+	margin-bottom: 1vh;
+	max-width: 60px;
+}
+.container div div {
+	text-decoration: none;
+	color: #000;
+  font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item a {
+  font-weight: 500;
+}
+
+.signout {
+	position: absolute;
+	right: 2vw;
+}
+
+.form-inline {
+	margin-bottom: 0;
+}
+
+.form-inline button{
+	font-weight: 500;
+}

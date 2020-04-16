@@ -64,6 +64,7 @@ snapshot.forEach(function(childSnapshot) {
     divPatCol1Row3.classList.add("flex");
     var divPatCol1Row3Col1 = document.createElement('div');
     var divPatCol1Row3Col2 = document.createElement('div');
+    var divPatCol1Row3Col3 = document.createElement('div');
     divPatCol1.appendChild(divPatCol1Row3);
 
     divPatCol1Row3.appendChild(divPatCol1Row3Col1);
@@ -71,10 +72,10 @@ snapshot.forEach(function(childSnapshot) {
     divPatCol1Row3Col1.classList.add("col");
     divPatCol1Row3Col2.classList.add("col");
 
-    var disease = child2Snapshot.child("patientDisease").val().toUpperCase();
+    var disease = child2Snapshot.child("patientSymptoms").val().toUpperCase();
     // var divDisease = document.createElement('div');
     // divPatCol1.appendChild(divDisease);
-    divPatCol1Row3Col1.innerHTML = "<b>PATIENT DISEASE : </b>" +  disease;
+    divPatCol1Row3Col1.innerHTML = "<b>PATIENT SYMPTOMS : </b>" +  disease;
 
     var bloodGroup = child2Snapshot.child("patientBloodGroup").val().toUpperCase();
     // var divBloodGroup = document.createElement('div');
@@ -86,13 +87,18 @@ snapshot.forEach(function(childSnapshot) {
     divPatCol1Row2.classList.add("flex");
     var divPatCol1Row2Col1 = document.createElement('div');
     var divPatCol1Row2Col2 = document.createElement('div');
+    var divPatCol1Row2Col3 = document.createElement('div');
     divPatCol1.appendChild(divPatCol1Row2);
 
     divPatCol1Row2.appendChild(divPatCol1Row2Col1);
     divPatCol1Row2.appendChild(divPatCol1Row2Col2);
-    divPatCol1Row2Col1.classList.add("col");
-    divPatCol1Row2Col2.classList.add("col");
+    divPatCol1Row2.appendChild(divPatCol1Row2Col3);
+    divPatCol1Row2Col1.classList.add("col-3");
+    divPatCol1Row2Col2.classList.add("col-3");
+    divPatCol1Row2Col3.classList.add("col");
 
+    var ivFluid = child2Snapshot.child("patientIVFluid").val().toUpperCase();
+    divPatCol1Row2Col3.innerHTML = "<b>PATIENT IV FLUID : </b>" +  ivFluid;
 
     // var divRoomNumber = document.createElement('div');
     // divPatCol1.appendChild(divRoomNumber);
@@ -105,10 +111,10 @@ snapshot.forEach(function(childSnapshot) {
     // var divDripStatus = document.createElement('div');
     var dripStatus = child2Snapshot.child("dripStatus").val();
     if(dripStatus == true) {
-      divPatCol2.innerHTML = '<img class="dripImage" src="img/red.png">';
+      divPatCol2.innerHTML = '<img class="dripImage" src="../img/red.png">';
     }
     else
-    divPatCol2.innerHTML = '<img class="dripImage" src="img/green.png">';
+    divPatCol2.innerHTML = '<img class="dripImage" src="../img/green.png">';
     // divPatCol2.appendChild(divDripStatus);
     });
 

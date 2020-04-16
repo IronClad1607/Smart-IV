@@ -6,7 +6,7 @@ An IoT based automatic alerting device that consists of laser and a precise Ligh
 
 **Hardware Components Used**
 
-1.NodeMcu
+1.NodeMCU
 
 2.Light dependent resistor(LDR)
 

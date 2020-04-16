@@ -3,13 +3,25 @@ package com.codeslayers.smartiv.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import com.codeslayers.smartiv.R
 import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_patient_detail.*
 
 class LoginActivity : AppCompatActivity() {
+
+    private var mDelayHandler: Handler? = null
+    private var DELAY: Long = 1000
+
+    private val mRunnable: Runnable = Runnable {
+        if (!isFinishing) {
+            val signInIntent = Intent(this, HomeActivity::class.java)
+            startActivity(signInIntent)
+        }
+    }
     private val auth by lazy {
         FirebaseAuth.getInstance()
     }
@@ -57,12 +69,16 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
                 }
+
+                runOnUiThread {
+                    btnLogin.doResult(false)
+                }
             }.addOnSuccessListener {
-                Toast.makeText(this, "Successfully Login", Toast.LENGTH_SHORT).show()
-                val signInIntent = Intent(this, HomeActivity::class.java)
-                startActivity(signInIntent)
+                btnLogin.doResult(true)
+                mDelayHandler = Handler()
+                mDelayHandler!!.postDelayed(mRunnable, DELAY)
             }.addOnFailureListener {
-                Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show()
+                btnLogin.doResult(false)
             }
     }
 
@@ -82,12 +98,16 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
                 }
+                runOnUiThread {
+                    btnLogin.doResult(false)
+                }
             }.addOnSuccessListener {
-                Toast.makeText(this, "Successfully Login", Toast.LENGTH_LONG).show()
-                val signUpIntent = Intent(this, HomeActivity::class.java)
-                startActivity(signUpIntent)
+                btnLogin.doResult(true)
+                mDelayHandler = Handler()
+                mDelayHandler!!.postDelayed(mRunnable, DELAY)
+                btnLogin.reset()
             }.addOnFailureListener {
-                Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show()
+                btnLogin.doResult(false)
             }
     }
 
@@ -108,5 +128,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         finishAffinity()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        btnLogin.reset()
     }
 }

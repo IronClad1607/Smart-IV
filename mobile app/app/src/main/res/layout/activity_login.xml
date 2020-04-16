@@ -25,6 +25,7 @@
         android:id="@+id/tvWarning"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/textGrey"
         android:layout_below="@+id/logo"
         android:layout_gravity="center|top"
         android:layout_marginStart="10dp"
@@ -84,20 +85,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.button.MaterialButton
+    <com.unstoppable.submitbuttonview.SubmitButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:background="@color/backBlue"
-        android:backgroundTint="@color/backBlue"
-        android:text="@string/login"
-        android:textAllCaps="true"
-        android:textColor="@color/textGrey"
-        android:textSize="25sp"
-        android:theme="@style/FontChange" />
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="100dp"
+        app:buttonColor="@android:color/white"
+        app:buttonText="@string/login"
+        app:buttonTextSize="20sp"
+        app:progressStyle="loading"
+        app:succeedColor="@color/backBlue" />
 
 
 </RelativeLayout>

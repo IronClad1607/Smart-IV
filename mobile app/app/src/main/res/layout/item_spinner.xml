@@ -4,12 +4,12 @@
     android:id="@+id/tvList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@android:color/white"
+    android:theme="@style/AppTheme"
     android:fontFamily="@font/roboto_light"
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    tools:text="0.9% Normal Saline">
+    android:text="0.9% Normal Saline">
 
 </TextView>

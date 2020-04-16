@@ -11,7 +11,7 @@
     <string name="bed_number">Bed Number:</string>
     <string name="consulting_doctor">Consulting Doctor:</string>
     <string name="age">Age:</string>
-    <string name="patients_blood_group">Patients Blood Group:</string>
+    <string name="patients_blood_group">Blood Group:</string>
     <string name="suffering_from">Suffering From:</string>
     <string name="drip_used">Drip Used:</string>
     <string name="if_other">If Other:</string>

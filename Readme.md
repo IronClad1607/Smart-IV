@@ -3,11 +3,6 @@
 <img src = "/images/logo_round.png" height = "200" width="200" align="left" hspace="10" vspace="10">
 
 An IoT based automatic alerting device that consists of laser and a precise Light Dependent Resistor to detect the laser which is employed to constantly monitor the fluid level. When the fluid level is below the critical level which will be defined by laser, it will alert the patient through buzzer, nurses and doctors through mobile app and the central control room using web app.Smart-IV is a two-tier application with Android App focussing on node selection while web server handles all the records. The application allows the entry of a new patient, viewing profile facilities and deleting a node assignment to a patient.The application's objective is to form a helping hand to the healthcare workers to monitor the drip system connected to several patients.
-<br>
-<br>
-<br>
-<br>
-<br>
 
 **Hardware Components Used**
 

@@ -22,7 +22,7 @@ Password for web-server: 123456
 
 **Hardware Components Used**
 
-1.NodeMcu
+1.NodeMCU
 
 2.Light dependent resistor(LDR)
 
@@ -56,7 +56,6 @@ With the new entry of a patient is created using web application, a record is ge
 
 
 **Screenshots of mobile application**
-
 <table align="center">
 	<tr>
 		<td>
@@ -92,7 +91,6 @@ With the new entry of a patient is created using web application, a record is ge
 		<td>
 			<img src="/images/mobileApp/Drip Entry Info.jpeg" height="390" width="180">
 		</td>
-	
 	</tr>
 </table>
 
@@ -155,6 +153,6 @@ With the new entry of a patient is created using web application, a record is ge
 
 At the moment, creating an entry and check for assistance on the website have been successfully deployed while deleting an entry is in progress. In the Android application, the addition of a drip entry has been deployed while check for assistance and deleting drip entry are in progress.
 
-As the dire need of drip system is evident in most medical facilities, the usage of Smart-IV is limitless.
+**As the dire need of drip system is evident in most medical facilities, the usage of Smart-IV is limitless.**
 
 

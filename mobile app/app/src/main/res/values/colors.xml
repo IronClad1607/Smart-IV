@@ -8,4 +8,5 @@
     <color name="textGrey">#5d6470</color>
     <color name="cardBlue">#648e8b</color>
     <color name="textYellow">#f3cd4c</color>
+    <color name="green" type="color">#9ccc65</color>
 </resources>

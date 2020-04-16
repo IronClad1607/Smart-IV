@@ -3,7 +3,7 @@
     <string name="login_id">Login ID</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="add_new_entry">Add New Entry</string>
+    <string name="add_new_entry">Add Drip Entry</string>
     <string name="check_for_assistance">Check For Assistance</string>
     <string name="sign_out">Sign Out</string>
     <string name="patient_name">Patient Name:</string>
@@ -24,4 +24,5 @@
     <string name="phone_number">Phone Number:</string>
     <string name="patient_medical">Patient Medical Background</string>
     <string name="syptoms">Syptoms:</string>
+    <string name="delete_drip_entry">Delete Drip Entry</string>
 </resources>

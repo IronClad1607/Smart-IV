@@ -46,15 +46,18 @@ With the new entry of a patient is created using web application, a record is ge
 
 **Technology Stack**
 
-1.Internet of Things
-
-2.Embedded c
-
-3.Firebase
-
-4.Android Studio
-
-5.HTML,CSS,Javascript
+ - Internet of Things
+ - Embedded c
+ - Firebase
+ - Kotlin
+ - XML
+ - Firebase Authentication
+ - Firebase Real Time Database
+ - Kotlin Coroutines
+ - Material Design
+ - HTML,CSS
+ - Javascript
+ - AWS Server - Apache 2
 
 **Dependencies**
 

@@ -101,7 +101,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/tvPatEN"
+                android:id="@+id/tvPatSym"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
@@ -133,7 +133,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tvPatName"
+                    android:id="@+id/tvRN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
@@ -157,7 +157,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tvPatGen"
+                    android:id="@+id/tvBN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="90dp"

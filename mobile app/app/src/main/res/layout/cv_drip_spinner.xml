@@ -10,13 +10,14 @@
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
-        android:id="@+id/rlPatNameNGender"
+        android:id="@+id/rlDripSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rlPatRoomNBed"
         android:padding="8dp">
 
         <LinearLayout
+            android:id="@+id/lldrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true">
@@ -32,10 +33,37 @@
 
             <Spinner
                 android:id="@+id/dripSpinner"
+                tools:listitem="@layout/item_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:spinnerMode="dropdown" />
         </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDripSpec"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lldrip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/colorAccent"
+            app:hintTextColor="@color/colorAccent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/if_other"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
     </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>

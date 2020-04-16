@@ -9,7 +9,7 @@ import com.codeslayers.smartiv.R
 class SplashActivity : AppCompatActivity() {
 
     private var mDelayHandler: Handler? = null
-    private var SPLASH_DELAY: Long = 5000
+    private var SPLASH_DELAY: Long = 3000
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {

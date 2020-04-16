@@ -25,4 +25,6 @@
     <string name="patient_medical">Patient Medical Background</string>
     <string name="syptoms">Syptoms:</string>
     <string name="delete_drip_entry">Delete Drip Entry</string>
+    <string name="please_select_a_drip_from_the_spinner_and_then_press_submit">Please Select a Drip from the Spinner and Then Press Submit</string>
+    <string name="enter_6721522_or_9420875_to_continue">Enter 6721522 or 9420875 to continue</string>
 </resources>

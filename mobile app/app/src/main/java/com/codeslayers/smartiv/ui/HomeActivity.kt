@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.createentry.CreateEntryActivity
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -27,14 +28,19 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         cvNewEntry.setOnClickListener {
-            val newEntryIntent = Intent(this,
-                CreateEntryActivity::class.java)
+            val newEntryIntent = Intent(
+                this,
+                CreateEntryActivity::class.java
+            )
             startActivity(newEntryIntent)
         }
 
-        cvCheckPatience.setOnClickListener{
-            val checkIntent = Intent(this,AssistanceActivity::class.java)
-            startActivity(checkIntent)
+        cvCheckPatience.setOnClickListener {
+            Snackbar.make(rootLayout, "In Progress", Snackbar.LENGTH_SHORT).show()
+        }
+
+        cvDeleteDrip.setOnClickListener {
+            Snackbar.make(rootLayout, "In Progress", Snackbar.LENGTH_SHORT).show()
         }
 
     }

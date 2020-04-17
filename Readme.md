@@ -12,7 +12,7 @@ Web App: [Smart-IV Server](http://www.thedemon12.xyz)
 
 Login id for web-server: kartik@hospital.com
 
-Password for web-server: 123456
+Password for web-server: abc123
 
 *-Red circles on DRIP STATUS activity represents that IV bottle is about to get emptied.*
 
@@ -46,7 +46,7 @@ Password for web-server: 123456
 
 •	The nurse and doctors will be notified about the fluid level using mobile and web application.
 
-<img src = "/images/smartiv-git.PNG" height = "200" width="800" align="center" hspace="10" vspace="10"> 
+<img src = "/images/smartiv-git.PNG" height = "200" width="800" align="center" hspace="10" vspace="10">
 
 The cost of the hardware product is estimated to be not more than Rs. 400 which makes it highly economical to be employed in the hospitals.
 
@@ -84,7 +84,7 @@ With the new entry of a patient is created using web application, a record is ge
 	</tr>
 	<tr>
 		<td>
-			Details 
+			Details
 		</td>
 	</tr>
 	<tr>
@@ -103,7 +103,7 @@ With the new entry of a patient is created using web application, a record is ge
 		</td>
 		<td>
 			Home Page
-		</td>	
+		</td>
  </tr>
  <tr>
  	<td>
@@ -120,7 +120,7 @@ With the new entry of a patient is created using web application, a record is ge
 			Drip Status Page
 		</td>
 	</tr>
-	<tr>	
+	<tr>
 		<td><img src="/images/webserver/4.PNG" height="180" width="350">
 		</td>
 		<td><img src="/images/webserver/5.PNG" height="180" width="350">
@@ -154,5 +154,3 @@ With the new entry of a patient is created using web application, a record is ge
 At the moment, creating an entry and check for assistance on the website have been successfully deployed while deleting an entry is in progress. In the Android application, the addition of a drip entry has been deployed while check for assistance and deleting drip entry are in progress.
 
 **As the dire need of drip system is evident in most medical facilities, the usage of Smart-IV is limitless.**
-
-

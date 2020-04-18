@@ -40,6 +40,13 @@ class LoginActivity : AppCompatActivity() {
             startActivity(directIntent)
         }
 
+        etLoginId.setOnClickListener {
+            btnLogin.reset()
+        }
+        etPass.setOnClickListener {
+            btnLogin.reset()
+        }
+
         btnLogin.setOnClickListener {
             val userID = etLoginId.editText?.text.toString()
             val pass = etPass.editText?.text.toString()
@@ -68,11 +75,10 @@ class LoginActivity : AppCompatActivity() {
                     } catch (e: FirebaseAuthWeakPasswordException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
-                }
-
-                runOnUiThread {
                     btnLogin.doResult(false)
                 }
+
+
             }.addOnSuccessListener {
                 btnLogin.doResult(true)
                 mDelayHandler = Handler()
@@ -97,15 +103,12 @@ class LoginActivity : AppCompatActivity() {
                     } catch (e: FirebaseAuthWeakPasswordException) {
                         Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
                     }
-                }
-                runOnUiThread {
                     btnLogin.doResult(false)
                 }
             }.addOnSuccessListener {
                 btnLogin.doResult(true)
                 mDelayHandler = Handler()
                 mDelayHandler!!.postDelayed(mRunnable, DELAY)
-                btnLogin.reset()
             }.addOnFailureListener {
                 btnLogin.doResult(false)
             }

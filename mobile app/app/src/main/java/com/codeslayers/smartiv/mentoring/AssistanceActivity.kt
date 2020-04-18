@@ -1,4 +1,4 @@
-package com.codeslayers.smartiv.ui
+package com.codeslayers.smartiv.mentoring
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

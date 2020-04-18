@@ -93,7 +93,7 @@ class PatientDetailActivity : AppCompatActivity() {
         }
 
         dripSpinner.adapter =
-            ArrayAdapter<String>(this, R.layout.item_spinner, dripName)
+            ArrayAdapter(this, R.layout.item_spinner, dripName)
 
         dripSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {

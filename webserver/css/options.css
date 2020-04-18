@@ -1,8 +1,10 @@
+html {
+	height: 100%;
+}
 body{
 	/* background-color: #60dfcd;
 background-image: linear-gradient(315deg, #60dfcd 0%, #1e9afe 74%); */
   background-color: #25CABF;
-	min-height: 100vh;
 }
 
 #logo {

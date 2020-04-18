@@ -1,6 +1,6 @@
 const div = document.getElementById('show');
 
-const db = firebase.database();
+const db = firebaseConfig2.database();
 db.ref().on('value', function(snapshot) {
 div.innerHTML = "";
 snapshot.forEach(function(childSnapshot) {

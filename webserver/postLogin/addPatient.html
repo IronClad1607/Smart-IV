@@ -30,7 +30,7 @@
           <a class="nav-link" href="showEntry.html">SHOW STATUS</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#">DELETE ENTRY</a>
+          <a class="nav-link" href="removePatient.html">DELETE ENTRY</a>
         </li>
       </ul>
       <form class="form-inline">
@@ -45,7 +45,7 @@
 
 
     <div class="container">
-      <form>
+      <form id="addPatientForm">
         <div class="form-row">
           <div class=" col-md-6 form-group">
             <label>Patient Name</label>
@@ -126,7 +126,7 @@
           </div>
         </div>
         <button type="button" id="submit" class="btn btn-primary">Submit</button>
-        <div id="status"></div>
+        <div id="status" class="alert alert-primary" role="alert"></div>
       </form>
     </div>
 

@@ -1,0 +1,109 @@
+html {
+	height: 100%;
+}
+body {
+  background-color: #ffac81;
+  background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+
+
+  /* background-color: #25CABF; */
+}
+
+.dripClass {
+min-height: 80px;
+}
+
+#logo {
+  display: block;
+  margin: 3vh auto 5vh auto;
+  max-width: 150px;
+}
+
+#logoContainer h1 {
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+}
+#logoContainer {
+ margin: 2vh auto;
+}
+
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item a {
+  font-weight: 500;
+}
+
+.form-inline {
+	margin-bottom: 0;
+}
+
+.form-inline button{
+	font-weight: 500;
+}
+
+#check {
+    color: #000;
+    background-color: #f3cd4c;
+    border-color: #f3cd4c;
+}
+.container form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#inputPatientID {
+  background-color: rgba(0,0,0,0);
+  border: 1px solid black;
+}
+#inputPatientID:-internal-autofill-selected {
+      background-color: rgba(0,0,0,0) !important;
+}
+
+#inputPatientID:focus {
+  box-shadow: 0 0 0 3px rgba(0,0,0,.25);
+
+}
+
+#pat {
+  margin-top: 5vh;
+  background-color: rgba(255,255,255,0.2);
+  padding: 15px;
+  visibility: hidden;
+}
+
+
+#check:focus {
+    box-shadow: 0 0 0 3px rgba(0,0,0,.25);
+}
+
+
+#discharge {
+  text-align: center;
+  display: block;
+  visibility: hidden;
+  margin: 2vh auto;
+  background-color: rgba(255,0,0,0.6);
+  border: none;
+}
+
+#discharge:focus {
+    box-shadow: 0 0 0 3px rgba(0,0,0,.25);
+}
+
+#message {
+
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  visibility: hidden;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

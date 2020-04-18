@@ -1,4 +1,4 @@
-const auth = firebase.auth();
+const auth = firebaseConfig1.auth();
 const statDiv = document.getElementById('status');
 auth.onAuthStateChanged(function(user) {
 if (user) {

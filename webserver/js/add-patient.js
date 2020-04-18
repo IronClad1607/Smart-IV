@@ -1,12 +1,12 @@
-const db = firebase.database();
+const db = firebaseConfig1.database();
 const statDiv = document.getElementById('status');
+const form = document.getElementById('addPatientForm');
 // dbRefObject.on('value', snap => console.log(snap.val()));
 
 const submit = document.getElementById('submit');
 
 submit.addEventListener("click", function(){
   var patID = Date.now() % Math.pow(10,7);
-  console.log(patID);
   const name = document.getElementById('inputName').value;
   const age = document.getElementById('inputAge').value;
   // const disease = document.getElementById('inputDisease').value;
@@ -22,7 +22,7 @@ submit.addEventListener("click", function(){
   const symptoms = document.getElementById('inputSymptoms').value;
   const insurance = document.getElementById('inputInsurance').value;
   const healthScheme = document.getElementById('inputHealthScheme').value;
-
+  form.reset();
 
   db.ref(patID).set({
     patientName: name,
@@ -36,17 +36,18 @@ submit.addEventListener("click", function(){
     bedNumber: bed,
     patientEmergencyNumber: emergencyNumber,
     patientAddress: address,
-    patientMedHistory: medHistory,
+    prevMedicalHistory: medHistory,
     patientSymptoms: symptoms,
     patientInsurance: insurance,
     patientHealthScheme: healthScheme
 }).then(function() {
-      // statDiv.style.color='rgb(0,255,0)';
-      statDiv.innerText = "Successfully added new patient!";
+      statDiv.style.color="rgb(0,115,255)"
+      statDiv.style.visibility = "visible";
+      statDiv.innerText = "SUCCESFULLY ADDED! PATIENT ID : " + patID ;
   }).catch(function(error) {
       var errorMessage = error.message;
       statDiv.style.color='rgb(255,0,0)';
-      statDiv.innerText = errorMessage;
+      statDiv.innerText = "ERROR: " + errorMessage.toUpperCase();
   });;
 
 });

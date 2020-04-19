@@ -63,7 +63,7 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvDeleteDrip"
+        android:id="@+id/cvCheckAssist"
         android:layout_width="match_parent"
         android:layout_height="166dp"
         android:layout_marginStart="16dp"
@@ -105,7 +105,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvCheckPatience"
+        android:id="@+id/cvDeleteDrip"
         android:layout_width="match_parent"
         android:layout_height="166dp"
         android:layout_marginStart="16dp"

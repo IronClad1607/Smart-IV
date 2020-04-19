@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.createentry.CreateEntryActivity
+import com.codeslayers.smartiv.montoring.AssistanceActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
@@ -35,8 +36,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(newEntryIntent)
         }
 
-        cvCheckPatience.setOnClickListener {
-            Snackbar.make(rootLayout, "In Progress", Snackbar.LENGTH_SHORT).show()
+        cvCheckAssist.setOnClickListener {
+            val checkIntent = Intent(this,AssistanceActivity::class.java)
+            startActivity(checkIntent)
         }
 
         cvDeleteDrip.setOnClickListener {

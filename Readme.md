@@ -88,6 +88,9 @@ With the new entry of a patient is created using web application, a record is ge
 		<td>
 			Delete and details
 		</td>
+		<td>
+			Signout
+		</td>
 	</tr>
 	<tr>
 		<td>
@@ -98,6 +101,9 @@ With the new entry of a patient is created using web application, a record is ge
 		</td>
 		<td>
 			<img src="/images/mobileApp/Delete and Details.jpg" height="390" width="180">
+		</td>
+		<td>
+			<img src="/images/mobileApp/Signout.jpg" height="390" width="180">
 		</td>
 	</tr>
 </table>

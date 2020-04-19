@@ -6,7 +6,7 @@ An IoT based automatic alerting device that consists of laser and a precise Ligh
 
 **Links for mobile and web application**
 
-Mobile App: [Smart-IV.apk](https://bit.ly/SmartIV-APK-Link)
+Mobile App: [Smart-IV.apk](https://bit.ly/APK-SmartIV)
 
 Web App: [Smart-IV Server](http://www.thedemon12.xyz)
 
@@ -77,7 +77,7 @@ With the new entry of a patient is created using web application, a record is ge
 		</td>
 		<td><img src="/images/mobileApp/Login.jpeg" height="390" width="180">
 		</td>
-		<td><img src="/images/mobileApp/Options.jpeg" height="390" width="180">
+		<td><img src="/images/mobileApp/Options.jpg" height="390" width="180">
 		</td>
 		<td><img src="/images/mobileApp/Creating Drip Entry.jpeg" height="390" width="180">
 		</td>

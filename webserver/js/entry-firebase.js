@@ -111,10 +111,10 @@ snapshot.forEach(function(childSnapshot) {
     // var divDripStatus = document.createElement('div');
     var dripStatus = child2Snapshot.child("dripStatus").val();
     if(dripStatus == true) {
-      divPatCol2.innerHTML = '<img class="dripImage" src="../img/red.png">';
+      divPatCol2.innerHTML = '<img class="dripImage" src="../img/green.png">';
     }
     else
-    divPatCol2.innerHTML = '<img class="dripImage" src="../img/green.png">';
+    divPatCol2.innerHTML = '<img class="dripImage" src="../img/red.png">';
     // divPatCol2.appendChild(divDripStatus);
     });
 

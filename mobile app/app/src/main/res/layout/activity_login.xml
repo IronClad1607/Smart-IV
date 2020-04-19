@@ -7,7 +7,7 @@
     android:background="@drawable/back"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".ui.LoginActivity">
+    tools:context=".LoginActivity">
 
     <FrameLayout
         android:id="@+id/logo"

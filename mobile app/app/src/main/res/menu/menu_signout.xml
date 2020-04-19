@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/btnSearch"
+        android:title="@string/search_of_any_patient"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/btnSignout"
         android:title="@string/sign_out"
         app:showAsAction="never" />

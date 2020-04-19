@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/back"
     android:layout_height="match_parent"
-    tools:context=".ui.SplashActivity">
+    tools:context=".SplashActivity">
 
     <TextView
         android:layout_width="wrap_content"

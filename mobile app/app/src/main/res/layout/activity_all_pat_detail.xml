@@ -35,7 +35,7 @@
         android:layout_marginBottom="100dp"
         android:visibility="gone"
         app:buttonColor="@android:color/white"
-        app:buttonText="@string/submit"
+        app:buttonText="@string/delete"
         app:buttonTextSize="20sp"
         app:progressStyle="loading"
         app:succeedColor="@color/backBlue" />

@@ -3,27 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/back"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:padding="20dp"
     tools:context=".montoring.AssistanceActivity">
 
+    <TextView
+        android:id="@+id/tvWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/tap_on_any_card_for_further_details"
+        android:textColor="@color/textGrey" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMontering"
-        tools:itemCount="5"
-        tools:listitem="@layout/cv_assistance_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWarning"
+        tools:itemCount="5"
+        tools:listitem="@layout/cv_assistance_list" />
 
     <TextView
         android:id="@+id/tvNoDrip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
         android:text="@string/there_is_no_active_drip_at_this_moment"
         android:textColor="@android:color/black"
-        android:fontFamily="@font/roboto_bold"
         android:textSize="30sp"
-        android:visibility="gone"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:visibility="gone" />
 
 </RelativeLayout>

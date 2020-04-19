@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.model.PatDetails
-import com.codeslayers.smartiv.ui.HomeActivity
+import com.codeslayers.smartiv.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_patient_detail.*
@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.cv_drip_spinner.*
 import kotlinx.android.synthetic.main.cv_patient_details.*
 import kotlinx.android.synthetic.main.cv_patient_medical.*
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.DisposableHandle
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

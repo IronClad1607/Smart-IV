@@ -1,9 +1,12 @@
 package com.codeslayers.smartiv.montoring
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import com.codeslayers.smartiv.HomeActivity
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.model.DripDetails
 import com.google.firebase.database.DataSnapshot
@@ -21,6 +24,16 @@ class AllPatDetailActivity : AppCompatActivity() {
 
     val dbDrip by lazy {
         FirebaseDatabase.getInstance("https://smart-iv-hackon.firebaseio.com/")
+    }
+
+    private var mDelayHandler: Handler? = null
+    private var DELAY: Long = 1000
+
+    private val mRunnable: Runnable = Runnable {
+        if (!isFinishing) {
+            val comIntent = Intent(this, HomeActivity::class.java)
+            startActivity(comIntent)
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -74,6 +87,9 @@ class AllPatDetailActivity : AppCompatActivity() {
                                         mRef.child(roomNumber.key!!).removeValue()
                                             .addOnSuccessListener {
                                                 btnDripDelete.doResult(true)
+
+                                                mDelayHandler = Handler()
+                                                mDelayHandler!!.postDelayed(mRunnable, DELAY)
                                             }
                                         break@test
                                     }
@@ -84,5 +100,10 @@ class AllPatDetailActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val backIntent = Intent(this, HomeActivity::class.java)
+        startActivity(backIntent)
     }
 }

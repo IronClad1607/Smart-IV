@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.codeslayers.smartiv.R
-import com.codeslayers.smartiv.ui.HomeActivity
+import com.codeslayers.smartiv.HomeActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase

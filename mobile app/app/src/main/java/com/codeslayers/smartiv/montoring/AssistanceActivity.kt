@@ -1,9 +1,11 @@
 package com.codeslayers.smartiv.montoring
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.codeslayers.smartiv.HomeActivity
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.model.DripDetails
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +30,11 @@ class AssistanceActivity : AppCompatActivity() {
 
     private val currentUser by lazy {
         FirebaseAuth.getInstance().currentUser
+    }
+
+    override fun onBackPressed() {
+        val backIntent = Intent(this, HomeActivity::class.java)
+        startActivity(backIntent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

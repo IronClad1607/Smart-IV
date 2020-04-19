@@ -32,4 +32,7 @@
     <string name="drip_status">Drip Status:</string>
     <string name="cric_level">At Critical Level</string>
     <string name="there_is_no_active_drip_at_this_moment">There is no Active Drip At this Moment!</string>
+    <string name="tap_on_any_card_for_further_details">Tap on any card for further Details!</string>
+    <string name="delete">Delete</string>
+    <string name="search_of_any_patient">Search of Any Patient</string>
 </resources>

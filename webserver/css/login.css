@@ -20,7 +20,7 @@ body{
 
  #formDiv {
 	 	margin: 5vh auto 0 auto;
-		max-width: 30vw;
+		max-width: 600px;
  }
 
  #loginBt {
@@ -32,7 +32,13 @@ body{
 	border-color: #000;
 	box-shadow: none;
 }
-#status{
+#status {
+	text-transform: uppercase;
 	margin-top: 2vh;
-	font-weight: 500;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  visibility: hidden;
 }

@@ -84,7 +84,8 @@ class AllPatDetailActivity : AppCompatActivity() {
                                 while (bedNumbers.hasNext()) {
                                     val bedNumber = bedNumbers.next()
                                     if (bedNumber.child("patientID").value.toString() == patID) {
-                                        mRef.child(roomNumber.key!!).removeValue()
+                                        mRef.child(roomNumber.key!!).child(bedNumber.key!!)
+                                            .removeValue()
                                             .addOnSuccessListener {
                                                 btnDripDelete.doResult(true)
 

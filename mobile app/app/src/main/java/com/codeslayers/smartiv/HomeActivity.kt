@@ -40,7 +40,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(checkIntent)
         }
 
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -59,13 +58,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(signOutIntent)
             true
         }
-
-        R.id.btnSearch -> {
-            val searchIntent = Intent(this, SearchActivity::class.java)
-            startActivity(searchIntent)
-            true
-        }
-
 
         else -> super.onOptionsItemSelected(item)
     }

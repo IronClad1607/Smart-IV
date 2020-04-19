@@ -57,27 +57,21 @@ class AssistanceActivity : AppCompatActivity() {
                         val bedNumbers = roomNumber.children.iterator()
                         while (bedNumbers.hasNext()) {
                             val bedNumber = bedNumbers.next()
-                            if (bedNumber.child("nurseID").value.toString() == currentUser?.email) {
-                                list.add(
-                                    DripDetails(
-                                        roomNumber.key.toString().substring(12),
-                                        bedNumber.key.toString().substring(11),
-                                        bedNumber.child("consultingDoctor").value.toString(),
-                                        bedNumber.child("dripStatus").value.toString().toBoolean(),
-                                        bedNumber.child("nurseID").value.toString(),
-                                        bedNumber.child("patientBloodGroup").value.toString(),
-                                        bedNumber.child("patientID").value.toString(),
-                                        bedNumber.child("patientIVFluid").value.toString(),
-                                        bedNumber.child("patientName").value.toString(),
-                                        bedNumber.child("patientSymptoms").value.toString()
-                                    )
+                            list.add(
+                                DripDetails(
+                                    roomNumber.key.toString().substring(12),
+                                    bedNumber.key.toString().substring(11),
+                                    bedNumber.child("consultingDoctor").value.toString(),
+                                    bedNumber.child("dripStatus").value.toString().toBoolean(),
+                                    bedNumber.child("nurseID").value.toString(),
+                                    bedNumber.child("patientBloodGroup").value.toString(),
+                                    bedNumber.child("patientID").value.toString(),
+                                    bedNumber.child("patientIVFluid").value.toString(),
+                                    bedNumber.child("patientName").value.toString(),
+                                    bedNumber.child("patientSymptoms").value.toString()
                                 )
-                                rvMontering.visibility = View.VISIBLE
-                                tvNoDrip.visibility = View.GONE
-                                tvWarning.visibility = View.VISIBLE
-                                mAdapter.notifyDataSetChanged()
-
-                            }
+                            )
+                            mAdapter.notifyDataSetChanged()
                         }
                     }
 

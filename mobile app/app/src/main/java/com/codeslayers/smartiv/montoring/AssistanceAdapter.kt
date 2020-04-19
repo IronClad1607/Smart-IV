@@ -22,11 +22,11 @@ class AssistanceAdapter(val dripList: ArrayList<DripDetails>) :
                 tvBN.text = dripDetail.bedNumber
                 tvPatName.text = dripDetail.patientName
                 if (dripDetail.dripStatus) {
-                    ivPatientDripStatusGreen.visibility = View.VISIBLE
-                    ivPatientDripStatusRed.visibility = View.GONE
-                } else {
                     ivPatientDripStatusGreen.visibility = View.GONE
                     ivPatientDripStatusRed.visibility = View.VISIBLE
+                } else {
+                    ivPatientDripStatusGreen.visibility = View.VISIBLE
+                    ivPatientDripStatusRed.visibility = View.GONE
                 }
 
                 setOnClickListener {

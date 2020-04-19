@@ -134,6 +134,28 @@ With the new entry of a patient is created using web application, a record is ge
 		<td><img src="/images/webserver/5.PNG" height="180" width="350">
 		</td>
 	</tr>
+<tr>
+ <td>
+			Delete Page
+		</td>
+		<td>
+			Unsuccessful Discharge Page
+		</td>
+	</tr>
+	<tr>
+		<td><img src="/images/webserver/6.PNG" height="180" width="350">
+		</td>
+		<td><img src="/images/webserver/7.PNG" height="180" width="350">
+		</td>
+	</tr>
+<tr>
+ <td> 	              Successful Discharge Page
+		</td>
+	</tr>
+	<tr>
+		<td><img src="/images/webserver/8.PNG" height="180" width="350">
+		</td>
+	</tr>
 </table>
 
 **Technology Stack**
@@ -158,7 +180,9 @@ With the new entry of a patient is created using web application, a record is ge
 2.Internet connection
 
 **Future Aspects**
+
 1.This setup can also be used to measure the drip rate using the same Laser - LDR principle which is needed to be set by nurse according to the value calculated using formula. If the drip rate changes in the course of transfusion, then it will notify the staff which in turn can take the necessary steps.
+
 2.Additionally, the QR/Barcode Scanner included in the app can be used to check the validity of the drip bottles present in hospitals. QR/Barcode can even be used to manage the database of supply of IV fluids in the hospital.
 
 **According to the Bloomberg healthiest country index, India has slipped down to the position 120 out of 169 countries. As the dire need of drip system is evident in most medical facilities, the usage of Smart-IV is limitless.In order to outperform our current potential in future emergencies it's important to use technologically advanced solution in the medical industry.**

@@ -10,10 +10,6 @@ Mobile App: [Smart-IV.apk](https://bit.ly/APK-SmartIV)
 
 Web App: [Smart-IV Server](http://www.thedemon12.xyz)
 
-Login id for web-server: kartik@hospital.com
-
-Password for web-server: abc123
-
 *-Red circles on DRIP STATUS activity represents that IV bottle is about to get emptied.*
 
 *-Green circles on DRIP STATUS activity represents that IV bottle still contains adequate amount of fluid.*
@@ -86,10 +82,22 @@ With the new entry of a patient is created using web application, a record is ge
 		<td>
 			Details
 		</td>
+		<td>
+			Check for assistance
+		</td>
+		<td>
+			Delete and details
+		</td>
 	</tr>
 	<tr>
 		<td>
 			<img src="/images/mobileApp/Drip Entry Info.jpeg" height="390" width="180">
+		</td>
+		<td>
+			<img src="/images/mobileApp/List Assistance.jpg" height="390" width="180">
+		</td>
+		<td>
+			<img src="/images/mobileApp/Delete and Details.jpg" height="390" width="180">
 		</td>
 	</tr>
 </table>
@@ -149,8 +157,7 @@ With the new entry of a patient is created using web application, a record is ge
 
 2.Internet connection
 
-**Progress**
+**Future Aspects**
 
-At the moment, creating an entry and check for assistance on the website have been successfully deployed while deleting an entry is in progress. In the Android application, the addition of a drip entry has been deployed while check for assistance and deleting drip entry are in progress.
 
 **As the dire need of drip system is evident in most medical facilities, the usage of Smart-IV is limitless.**

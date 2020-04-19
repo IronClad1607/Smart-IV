@@ -48,7 +48,7 @@ class AssistanceActivity : AppCompatActivity() {
                         if (bedNumber.child("nurseID").value.toString() == currentUser?.email) {
                             list.add(
                                 DripDetails(
-                                    roomNumber.key.toString().substring(12, 14),
+                                    roomNumber.key.toString().substring(12),
                                     bedNumber.key.toString().substring(11),
                                     bedNumber.child("consultingDoctor").value.toString(),
                                     bedNumber.child("dripStatus").value.toString().toBoolean(),

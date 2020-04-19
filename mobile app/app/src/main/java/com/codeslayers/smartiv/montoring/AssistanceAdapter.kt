@@ -1,9 +1,11 @@
 package com.codeslayers.smartiv.montoring
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.LayoutInflater.*
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.model.DripDetails
@@ -25,6 +27,12 @@ class AssistanceAdapter(val dripList: ArrayList<DripDetails>) :
                 } else {
                     ivPatientDripStatusGreen.visibility = View.GONE
                     ivPatientDripStatusRed.visibility = View.VISIBLE
+                }
+
+                setOnClickListener {
+                    val detailsIntent = Intent(context, AllPatDetailActivity::class.java)
+                    detailsIntent.putExtra("allDetails", dripDetail)
+                    startActivity(context, detailsIntent, null)
                 }
             }
         }

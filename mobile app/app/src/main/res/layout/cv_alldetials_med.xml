@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPatMed"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_below="@+id/cvPatDetails"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"
     android:background="@color/cardBlue"
     android:backgroundTint="@color/cardBlue"
     android:elevation="10dp"
@@ -22,7 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="@string/patient_medical"
+            android:text="@string/patient_medical_aD"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
@@ -36,8 +39,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginEnd="5dp">
+                android:layout_alignParentStart="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -58,30 +60,7 @@
                     tools:text="Dr. Ram" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_alignParentEnd="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/patients_blood_group"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tvPatBG"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    tools:text="O+" />
-            </LinearLayout>
         </RelativeLayout>
 
 
@@ -111,65 +90,59 @@
                 tools:text="qwertyuiop[]\';lkjhgfdsazxcvbnm,.//.,,mmmnbvcxzasdfghjkl;']\[pooiuuyttreeww" />
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/rlPatRoomNBed"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/llDripName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/llPatSyp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="8dp">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginEnd="5dp">
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/drip_used"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/room_number"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tvRN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    tools:text="102" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvDripName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true">
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="Dr. Ram" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/bed_number"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDripName"
+            android:layout_alignParentStart="true">
 
-                <TextView
-                    android:id="@+id/tvBN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="90dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    tools:text="10" />
-            </LinearLayout>
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/drip_status"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvDripStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="Dr. Ram" />
+        </LinearLayout>
 
 
     </RelativeLayout>
-
 </com.google.android.material.card.MaterialCardView>

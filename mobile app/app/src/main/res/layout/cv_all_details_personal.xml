@@ -3,8 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPatDetails"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginBottom="8dp"
     android:background="@color/cardBlue"
     android:backgroundTint="@color/cardBlue"
     android:elevation="10dp"
@@ -15,6 +18,7 @@
         android:layout_height="match_parent"
         android:padding="8dp">
 
+
         <TextView
             android:id="@+id/tvHeading"
             android:layout_width="wrap_content"
@@ -22,15 +26,41 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="@string/patient_medical"
+            android:text="@string/patient_personal_details"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
-        <RelativeLayout
-            android:id="@+id/rlPatDocNBG"
+        <LinearLayout
+            android:id="@+id/llPatId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvHeading"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/patient_id"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvPatID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="856234" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPatNameNGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llPatId"
             android:layout_marginBottom="8dp">
 
             <LinearLayout
@@ -44,25 +74,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="@string/consulting_doctor"
+                    android:text="@string/patient_name"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tvPatDoc"
+                    android:id="@+id/tvPatName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:textColor="@android:color/black"
                     android:textSize="15sp"
-                    tools:text="Dr. Ram" />
+                    tools:text="abcdefghijklmnopqrstu" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_alignParentEnd="true">
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -74,7 +104,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tvPatBG"
+                    android:id="@+id/tvPatGen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
@@ -84,38 +114,11 @@
             </LinearLayout>
         </RelativeLayout>
 
-
-        <LinearLayout
-            android:id="@+id/llPatSyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rlPatDocNBG"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="@string/syptoms"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tvPatSym"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_light"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"
-                tools:text="qwertyuiop[]\';lkjhgfdsazxcvbnm,.//.,,mmmnbvcxzasdfghjkl;']\[pooiuuyttreeww" />
-        </LinearLayout>
-
         <RelativeLayout
             android:id="@+id/rlPatRoomNBed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/llPatSyp"
+            android:layout_below="@+id/rlPatNameNGender"
             android:layout_marginBottom="8dp">
 
             <LinearLayout
@@ -168,8 +171,5 @@
                     tools:text="10" />
             </LinearLayout>
         </RelativeLayout>
-
-
     </RelativeLayout>
-
 </com.google.android.material.card.MaterialCardView>

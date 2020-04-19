@@ -1,5 +1,7 @@
 package com.codeslayers.smartiv.model
 
+import java.io.Serializable
+
 data class DripDetails(
     val roomNumber: String,
     val bedNumber: String,
@@ -11,4 +13,4 @@ data class DripDetails(
     val patientIVFluid: String,
     val patientName: String,
     val patientSymptoms: String
-)
+) : Serializable

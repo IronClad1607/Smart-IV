@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
     android:padding="10dp"
-    tools:context=".createentry.PatientDetailActivity">
+    tools:context=".montoring.AllPatDetailActivity">
 
     <include
         android:id="@+id/includePatDet"
-        layout="@layout/cv_patient_details"
+        layout="@layout/cv_all_details_personal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,38 +19,26 @@
 
     <include
         android:id="@+id/includePatMed"
-        layout="@layout/cv_patient_medical"
+        layout="@layout/cv_alldetials_med"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/includePatDet"
         android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/tvWarning"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/includePatMed"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/please_select_a_drip_from_the_spinner_and_then_press_submit"
-        android:textColor="@color/textGrey" />
-
-    <include
-        layout="@layout/cv_drip_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvWarning" />
 
     <com.unstoppable.submitbuttonview.SubmitButton
-        android:id="@+id/btnDripSubmit"
+        android:id="@+id/btnDripDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="100dp"
+        android:visibility="gone"
         app:buttonColor="@android:color/white"
         app:buttonText="@string/submit"
         app:buttonTextSize="20sp"
         app:progressStyle="loading"
         app:succeedColor="@color/backBlue" />
+
+
 </RelativeLayout>

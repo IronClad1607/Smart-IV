@@ -30,4 +30,5 @@
     <string name="enter_6721522_or_9420875_to_continue">Enter 6721522 or 9420875 to continue</string>
     <string name="enter_your_name_hosiptal_com_as_login_id_and_any_password_more_than_6_letters"><![CDATA[Enter \'<your_name>@hosiptal.com\' as Login Id and Any Password more than 6 letters]]></string>
     <string name="drip_status">Drip Status:</string>
+    <string name="cric_level">At Critical Level</string>
 </resources>

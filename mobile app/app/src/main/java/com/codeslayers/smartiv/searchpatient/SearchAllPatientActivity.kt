@@ -1,9 +1,11 @@
 package com.codeslayers.smartiv.searchpatient
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.codeslayers.smartiv.HomeActivity
 import com.codeslayers.smartiv.R
 import com.codeslayers.smartiv.model.PatAllDetails
 import com.google.firebase.database.DataSnapshot
@@ -19,6 +21,12 @@ class SearchAllPatientActivity : AppCompatActivity() {
 
     val dbDrip by lazy {
         FirebaseDatabase.getInstance("https://smart-iv-hackon.firebaseio.com/")
+    }
+
+
+    override fun onBackPressed() {
+        val backIntent = Intent(this, HomeActivity::class.java)
+        startActivity(backIntent)
     }
 
     @SuppressLint("SetTextI18n")

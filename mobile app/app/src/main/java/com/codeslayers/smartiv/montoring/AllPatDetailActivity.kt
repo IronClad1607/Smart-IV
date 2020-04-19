@@ -103,7 +103,7 @@ class AllPatDetailActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val backIntent = Intent(this, HomeActivity::class.java)
+        val backIntent = Intent(this, AssistanceActivity::class.java)
         startActivity(backIntent)
     }
 }

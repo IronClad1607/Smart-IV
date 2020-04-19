@@ -72,34 +72,27 @@ class AssistanceActivity : AppCompatActivity() {
                                         bedNumber.child("patientSymptoms").value.toString()
                                     )
                                 )
+                                rvMontering.visibility = View.VISIBLE
+                                tvNoDrip.visibility = View.GONE
+                                tvWarning.visibility = View.VISIBLE
                                 mAdapter.notifyDataSetChanged()
 
                             }
                         }
                     }
 
-                    if (list.size == 0) {
-                        tvNoDrip.visibility = View.VISIBLE
-                        rvMontering.visibility = View.GONE
-                        tvWarning.visibility = View.GONE
-                    } else {
-                        rvMontering.visibility = View.VISIBLE
-                        tvNoDrip.visibility = View.GONE
-                        tvWarning.visibility = View.VISIBLE
 
-                        rvMontering.layoutManager =
-                            LinearLayoutManager(
-                                this@AssistanceActivity,
-                                LinearLayoutManager.VERTICAL,
-                                false
-                            )
-                        rvMontering.adapter = mAdapter
-                    }
                 }
 
             })
         }
-
+        rvMontering.layoutManager =
+            LinearLayoutManager(
+                this@AssistanceActivity,
+                LinearLayoutManager.VERTICAL,
+                false
+            )
+        rvMontering.adapter = mAdapter
 
     }
 }

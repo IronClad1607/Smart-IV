@@ -111,63 +111,7 @@
                 tools:text="qwertyuiop[]\';lkjhgfdsazxcvbnm,.//.,,mmmnbvcxzasdfghjkl;']\[pooiuuyttreeww" />
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/rlPatRoomNBed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/llPatSyp"
-            android:layout_marginBottom="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginEnd="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/room_number"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tvRN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    tools:text="102" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/bed_number"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tvBN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="90dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    tools:text="10" />
-            </LinearLayout>
-        </RelativeLayout>
 
 
     </RelativeLayout>

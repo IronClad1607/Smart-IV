@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".searchpatient.SearchActivity"></activity>
+        <activity android:name=".searchpatient.SearchAllPatientActivity"></activity>
+        <activity android:name=".searchpatient.SearchActivity" />
         <activity android:name=".montoring.AllPatDetailActivity" />
         <activity android:name=".createentry.PatientDetailActivity" />
         <activity android:name=".montoring.AssistanceActivity" />

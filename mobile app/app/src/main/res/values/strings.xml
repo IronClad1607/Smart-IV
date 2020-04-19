@@ -35,4 +35,10 @@
     <string name="tap_on_any_card_for_further_details">Tap on any card for further Details!</string>
     <string name="delete">Delete</string>
     <string name="search_of_any_patient">Search of Any Patient</string>
+    <string name="health_scheme">Health Scheme:</string>
+    <string name="insurance">Insurance:</string>
+    <string name="previous_medical_history">Previous Medical History:</string>
+    <string name="current_record">Current Record:</string>
+    <string name="current_records">Current Records</string>
+    <string name="handling_nurse">Handling Nurse:</string>
 </resources>

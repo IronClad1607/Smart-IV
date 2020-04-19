@@ -73,24 +73,33 @@ class AssistanceActivity : AppCompatActivity() {
                                     )
                                 )
                                 mAdapter.notifyDataSetChanged()
+
                             }
                         }
+                    }
+
+                    if (list.size == 0) {
+                        tvNoDrip.visibility = View.VISIBLE
+                        rvMontering.visibility = View.GONE
+                        tvWarning.visibility = View.GONE
+                    } else {
+                        rvMontering.visibility = View.VISIBLE
+                        tvNoDrip.visibility = View.GONE
+                        tvWarning.visibility = View.VISIBLE
+
+                        rvMontering.layoutManager =
+                            LinearLayoutManager(
+                                this@AssistanceActivity,
+                                LinearLayoutManager.VERTICAL,
+                                false
+                            )
+                        rvMontering.adapter = mAdapter
                     }
                 }
 
             })
         }
 
-        if (list.size == 0) {
-            tvNoDrip.visibility = View.VISIBLE
-            rvMontering.visibility = View.GONE
-        } else {
-            rvMontering.visibility = View.VISIBLE
-            tvNoDrip.visibility = View.GONE
 
-            rvMontering.layoutManager =
-                LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-            rvMontering.adapter = mAdapter
-        }
     }
 }

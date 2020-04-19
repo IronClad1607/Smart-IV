@@ -35,7 +35,7 @@ class CreateEntryActivity : AppCompatActivity() {
     }
 
     private var mDelayHandler: Handler? = null
-    private var DELAY: Long = 2000
+    private var DELAY: Long = 1000
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
@@ -104,11 +104,9 @@ class CreateEntryActivity : AppCompatActivity() {
                     btnPatID.doResult(true)
                 }
             }
-
-            mDelayHandler = Handler()
-            mDelayHandler!!.postDelayed(mRunnable, DELAY)
-
         }
+        mDelayHandler = Handler()
+        mDelayHandler!!.postDelayed(mRunnable, DELAY)
     }
 
     override fun onDestroy() {
